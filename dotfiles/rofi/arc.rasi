@@ -1,0 +1,180 @@
+/*
+*  ██████   ██████  ███████ ██ 
+*  ██   ██ ██    ██ ██      ██ 
+*  ██████  ██    ██ █████   ██ 
+*  ██   ██ ██    ██ ██      ██ 
+*  ██   ██  ██████  ██      ██ 
+*
+*  Frederico Favaro
+*  https://github.com/fredericofavaro
+*/
+
+
+configuration {
+	display-drun:                "drun:";
+	display-run:                 "run:";
+	display-window:              "window:";
+    display-ssh:                 "ssh:";
+	show-icons:                  false;
+	sidebar-mode:                false;
+}
+
+* {
+    color0:                      #404552;
+    color8:                      #545864;
+    color1:                      #ff241f;
+    color9:                      #ff534e;
+    color2:                      #1ce629;
+    color10:                     #49ed53;
+    color3:                      #ffa81f;
+    color11:                     #ffba4e;
+    color4:                      #2978d7;
+    color12:                     #5294e2;
+    color5:	                     #8228da;
+    color13:                     #9c51e4;
+    color6:                      #5492dd;
+    color14:                     #7fb1ec;
+    color7:                      #9699a2;
+    color15:                     #cfd6e6;
+
+    background:                  #2f343f;
+    foreground:                  #cfd6e6;
+    
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    selected-normal-foreground:  @foreground;
+    selected-normal-background:  @color0;
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @background;
+
+    active-foreground:           @color12;
+    active-background:           @background;
+    selected-active-foreground:  @color12;
+    selected-active-background:  @color0;
+    alternate-active-foreground: @active-foreground;
+    alternate-active-background: @background;
+
+    urgent-foreground:           @foreground;
+    urgent-background:           @color8;
+    selected-urgent-foreground:  @foreground;
+    selected-urgent-background:  @color8;
+    alternate-urgent-foreground: @foreground;
+    alternate-urgent-background: @background;
+    
+    background-color:            @background;
+    separatorcolor:              @color12;
+    border-color:                @color12;
+
+    spacing:                     2;
+    font:                        "monospace 12";
+}
+
+window {
+    location:	                 center;
+	anchor:		                 center;
+	height:		                 31%;
+	width:		                 35%;
+	orientation:                 horizontal;
+	children:	                 [mainbox];
+    background-color:            @background;
+	text-color:                  @foreground;
+}
+
+mainbox {
+    border:                      2;
+    padding:                     10;
+}
+
+message {
+    border:                      2px 2px 2px;
+    border-color:                @separatorcolor;
+    padding:                     10;
+}
+
+textbox {
+    text-color:                  @foreground;
+}
+
+listview {
+    fixed-height:                0;
+    padding:	                 5 0 0;
+    spacing:                     5px ;
+}
+
+element {
+    border:                      0;
+    padding:                     5px ;
+}
+
+element.normal.normal {
+    background-color:            @normal-background;
+    text-color:                  @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color:            @urgent-background;
+    text-color:                  @urgent-foreground;
+}
+
+element.normal.active {
+    background-color:            @active-background;
+    text-color:                  @active-foreground;
+}
+
+element.selected.normal {
+    background-color:            @selected-normal-background;
+    text-color:                  @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color:            @selected-urgent-background;
+    text-color:                  @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color:            @selected-active-background;
+    text-color:                  @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color:            @alternate-normal-background;
+    text-color:                  @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color:            @alternate-urgent-background;
+    text-color:                  @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color:            @alternate-active-background;
+    text-color:                  @alternate-active-foreground;
+}
+
+button.selected {
+    background-color:            @selected-normal-background;
+    text-color:                  @selected-normal-foreground;
+}
+
+inputbar {
+    spacing:                     1;
+    text-color:                  @foreground;
+    padding:                     5px;
+    border:	                     0 0 2;
+    border-color:                @color0;
+}
+
+case-indicator {
+    spacing:                     0;
+    text-color:                  @normal-foreground;
+}
+
+entry {
+    spacing:                     0;
+    text-color:                  @normal-foreground;
+}
+
+prompt {
+    spacing:                     0;
+    text-color:                  @color12;
+}

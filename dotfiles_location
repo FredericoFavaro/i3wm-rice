@@ -1,0 +1,19 @@
+# i3WM
+~/.config/i3/config
+~/.config/i3/i3blocks.conf
+~/.config/i3/i3blocks/*
+
+# urxvt
+~/.Xresourses
+/usr/lib/urxvt/perl/*
+
+# tty login
+/etc/issue
+
+# ranger
+
+# Vim
+
+# GTK
+~/.gtkrc-2.0
+~/.config/gtk-3.0/settings.ini
