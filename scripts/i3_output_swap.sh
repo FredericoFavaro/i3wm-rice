@@ -6,6 +6,8 @@
 # The default settings always focus on primary display. To change that to
 # maintain focus on the screen/window focused after run this script, just
 # uncomment the two comment lines below (12 and 21).
+# Inspired by fbrinker's i3-display-swap.sh script: https://gist.github.com/fbrinker/df9cfbc84511d807f45041737ff3ea02
+
 
 DISPLAY_CONFIG=($(i3-msg -t get_outputs | jq -r '.[]|select(.active == true) |"\(.current_workspace)"'))
 # Uncomment the line below to enable focus following the window currently focused
